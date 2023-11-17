@@ -7,8 +7,13 @@ import java.io.*;
  */
 public class UsingBufferedReader {
     public static void main(String[] args) throws IOException {
-
-
+    	if(args.length < 1) {
+    		System.out.println("파일 이름을 명령줄 인수로 입력해주세요");
+    		return;
+    	}
+    	
+    	String fileName = args[0];
+    	System.out.println(fileName);
         //-------------- Test reading 1 MB file. --------------------
 
         StopWatch.start();
