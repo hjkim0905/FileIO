@@ -11,14 +11,14 @@ public class UsingBufferedReader {
     		System.out.println("파일 이름을 명령줄 인수로 입력해주세요");
     		return;
     	}
-    	//첫 번째 명령인수의 파일명 출
+    	//첫 번째 명령인수의 파일명
     	String fileName = args[0];
-    	System.out.println(fileName);
+    	
         //-------------- Test reading 1 MB file. --------------------
 
         StopWatch.start();
 
-        BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
+        BufferedReader inputStream= new BufferedReader(new FileReader(fileName));
         while (inputStream.read()!=-1){}
 
         long duration = StopWatch.stop();
@@ -26,18 +26,30 @@ public class UsingBufferedReader {
         
         inputStream.close();
 
+        //-------------- Test reading 1 MB file. --------------------
+
+//        StopWatch.start();
+//
+//        BufferedReader inputStream= new BufferedReader(new FileReader(DumpDataWriter.input1MB));
+//        while (inputStream.read()!=-1){}
+//
+//        long duration = StopWatch.stop();
+//        System.out.println(duration + " milsec");
+//        
+//        inputStream.close();
+
 
         //-------------- Test reading 10 MB file. --------------------
 
-        StopWatch.start();
-
-        BufferedReader inputStream2= new BufferedReader(new FileReader(DumpDataWriter.input10MB));
-        while (inputStream2.read()!=-1){}
-
-        long duration2 = StopWatch.stop();
-        System.out.println(duration2 + " milsec");
-
-        inputStream2.close();
+//        StopWatch.start();
+//
+//        BufferedReader inputStream2= new BufferedReader(new FileReader(DumpDataWriter.input10MB));
+//        while (inputStream2.read()!=-1){}
+//
+//        long duration2 = StopWatch.stop();
+//        System.out.println(duration2 + " milsec");
+//
+//        inputStream2.close();
 
         /*
         //-------------- Test reading 100 MB file. --------------------
