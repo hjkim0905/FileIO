@@ -11,7 +11,7 @@ public class UsingBufferedReader {
     		System.out.println("파일 이름을 명령줄 인수로 입력해주세요");
     		return;
     	}
-    	
+    	//첫 번째 명령인수의 파일명 출
     	String fileName = args[0];
     	System.out.println(fileName);
         //-------------- Test reading 1 MB file. --------------------
